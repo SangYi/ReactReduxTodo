@@ -8,6 +8,8 @@ var store = require('configureStore').configure();
 import firebase from 'app/firebase/';
 import router from 'app/router/';
 
+// import './../playground/firebase/index';
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(actions.login(user.uid));
